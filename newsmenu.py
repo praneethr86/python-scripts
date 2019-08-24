@@ -13,6 +13,7 @@ def menu():
         A: Editorials - Hindu
         B: Editorials - ET
         C: Sports - F1
+        D: Sports - EPL
         Q: Quit/Log Out
 
         Please enter your choice: """)
@@ -23,6 +24,8 @@ def menu():
         viewet()
     elif choice == "C" or choice =="c":
         viewf1()
+    elif choice == "D" or choice =="d":
+        viewepl()
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
@@ -42,6 +45,11 @@ def viewet():
 
 def viewf1():
     cmd = 'node index sports f1';
+    os.system(cmd);
+    readfuther();
+
+def viewepl():
+    cmd = 'node index sports epl';
     os.system(cmd);
     readfuther();
 
