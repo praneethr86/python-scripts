@@ -6,14 +6,15 @@ def main():
     menu()
 
 def menu():
-    path = '/Users/ppatakota/Desktop/reactDev/newscast-cli/';
+    path = '/Users/ppatakota/Desktop/reactDev/newscast-cli/'
     os.chdir(path)
     print("\nSelect Your Favorite News : ")
     choice = input("""
         A: Editorials - Hindu
-        B: Editorials - ET
-        C: Sports - F1
-        D: Sports - EPL
+        B: Editorials - EconomicTimes
+        C: Editorials - IndianExpress
+        D: Sports - Formula1
+        E: Sports - PremierLeague
         Q: Quit/Log Out
 
         Please enter your choice: """)
@@ -23,8 +24,10 @@ def menu():
     elif choice == "B" or choice =="b":
         viewet()
     elif choice == "C" or choice =="c":
-        viewf1()
+        viewindexp()
     elif choice == "D" or choice =="d":
+        viewf1()
+    elif choice == "E" or choice =="e":
         viewepl()
     elif choice=="Q" or choice=="q":
         sys.exit
@@ -34,34 +37,39 @@ def menu():
         menu()
 
 def viewhindu():
-    cmd = 'node index eds hindu';
-    os.system(cmd);
-    readfuther();
+    cmd = 'node index eds hindu'
+    os.system(cmd)
+    readfuther()
 
 def viewet():
-    cmd = 'node index eds et';
-    os.system(cmd);
-    readfuther();
+    cmd = 'node index eds et'
+    os.system(cmd)
+    readfuther()
+
+def viewindexp():
+    cmd = 'node index eds ie'
+    os.system(cmd)
+    readfuther()
 
 def viewf1():
-    cmd = 'node index sports f1';
-    os.system(cmd);
-    readfuther();
+    cmd = 'node index sports f1'
+    os.system(cmd)
+    readfuther()
 
 def viewepl():
-    cmd = 'node index sports epl';
-    os.system(cmd);
-    readfuther();
+    cmd = 'node index sports epl'
+    os.system(cmd)
+    readfuther()
 
 def readfuther():
     choice = input("""
         Do you want to read further? 
-        Press 'y' to continue
-        Press any other key to quit : """)
-    if choice == 'Y' or choice == 'y':
-        menu();
-    else:
+        Press any-key to continue
+        Press 'Q/q' to quit : """)
+    if choice == 'Q' or choice == 'q':
         print('Goodbye!')
-        sys.exit
+        sys.exit()
+    else:
+        menu()
 
 main()
