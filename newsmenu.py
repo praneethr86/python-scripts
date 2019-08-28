@@ -8,7 +8,7 @@ def main():
 def menu():
     path = '/Users/ppatakota/Desktop/reactDev/newscast-cli/'
     os.chdir(path)
-    print("\nSelect Your Favorite News : ")
+    print("\nSelect Your News source : ")
     choice = input("""
         A: Editorials - Hindu
         B: Editorials - EconomicTimes
