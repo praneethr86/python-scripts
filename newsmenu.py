@@ -2,7 +2,7 @@ import sys
 import os
 
 def main():
-    print("\nGood Morning, Praneeth")
+    print("\nHappy Reading!")
     menu()
 
 def menu():
@@ -15,6 +15,7 @@ def menu():
         C: Editorials - IndianExpress
         D: Sports - Formula1
         E: Sports - PremierLeague
+        F: YourStory - Social
         Q: Quit/Log Out
 
         Please enter your choice: """)
@@ -29,39 +30,46 @@ def menu():
         viewf1()
     elif choice == "E" or choice =="e":
         viewepl()
+    elif choice == "F" or choice == "f":
+        viewyssocial()
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
-        print("You must only select either A,B,C, or Q.")
+        print("You must only select either A-F or Q.")
         print("Please try again")
         menu()
 
 def viewhindu():
     cmd = 'node index eds hindu'
     os.system(cmd)
-    readfuther()
+    readfurther()
 
 def viewet():
     cmd = 'node index eds et'
     os.system(cmd)
-    readfuther()
+    readfurther()
 
 def viewindexp():
     cmd = 'node index eds ie'
     os.system(cmd)
-    readfuther()
+    readfurther()
 
 def viewf1():
     cmd = 'node index sports f1'
     os.system(cmd)
-    readfuther()
+    readfurther()
 
 def viewepl():
     cmd = 'node index sports epl'
     os.system(cmd)
-    readfuther()
+    readfurther()
 
-def readfuther():
+def viewyssocial():
+    cmd = 'node index yourstory social'
+    os.system(cmd)
+    readfurther()
+
+def readfurther():
     choice = input("""
         Do you want to read further? 
         Press any-key to continue
