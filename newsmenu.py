@@ -16,6 +16,7 @@ def menu():
         D: Sports - Formula1
         E: Sports - PremierLeague
         F: YourStory - Social
+        G: Editorials - Guardian
         Q: Quit/Log Out
 
         Please enter your choice: """)
@@ -32,10 +33,12 @@ def menu():
         viewepl()
     elif choice == "F" or choice == "f":
         viewyssocial()
+    elif choice == "G" or choice == "g":
+        viewguardian()
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
-        print("You must only select either A-F or Q.")
+        print("You must only select either A-G or Q.")
         print("Please try again")
         menu()
 
@@ -66,6 +69,11 @@ def viewepl():
 
 def viewyssocial():
     cmd = 'node index yourstory social'
+    os.system(cmd)
+    readfurther()
+
+def viewguardian():
+    cmd = 'node index eds guardian'
     os.system(cmd)
     readfurther()
 
