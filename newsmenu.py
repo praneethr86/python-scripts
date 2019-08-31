@@ -80,9 +80,9 @@ def viewguardian():
 def readfurther():
     choice = input("""
         Do you want to read further? 
-        Press any-key to continue
+        Press any-key to continue.
         Press 'Q/q' to quit : """)
-    if choice == 'Q' or choice == 'q':
+    if choice == "Q" or choice == "q":
         print('Goodbye!')
         sys.exit()
     else:
