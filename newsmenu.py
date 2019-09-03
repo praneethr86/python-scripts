@@ -18,6 +18,7 @@ def menu():
         F: YourStory - Social
         G: Editorials - Guardian
         H: Project Syndicate
+        I: Harvard Business Review
         Q: Quit/Log Out
 
         Please enter your choice: """)
@@ -38,11 +39,13 @@ def menu():
         viewguardian()
     elif choice == "H" or choice == "h":
         viewprojsyndicate()
+    elif choice == "I" or choice == "i":
+        viewhbrlatest()
     elif choice=="Q" or choice=="q":
         print('\nGoodbye!\n\n')
         sys.exit
     else:
-        print("You must only select either A-H or Q.")
+        print("You must only select either A-I or Q.")
         print("Please try again")
         menu()
 
@@ -86,6 +89,10 @@ def viewprojsyndicate():
     os.system(cmd)
     readfurther()
 
+def viewhbrlatest():
+    cmd = 'node index hbr latest'
+    os.system(cmd)
+    readfurther()
 
 def readfurther():
     choice = input("""
