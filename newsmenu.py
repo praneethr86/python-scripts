@@ -13,12 +13,12 @@ def menu():
         A: Editorials - Hindu
         B: Editorials - EconomicTimes
         C: Editorials - IndianExpress
-        D: Sports - Formula1
-        E: Sports - PremierLeague
-        F: YourStory - Social
-        G: Editorials - Guardian
-        H: Project Syndicate
-        I: Harvard Business Review
+        D: Editorials - Guardian
+        E: Editorials -  Project Syndicate
+        F: Management -  Harvard Business Review
+        G: Sports - Formula1
+        H: Sports - PremierLeague
+        I: Startups - YourStory:Social 
         Q: Quit/Log Out
 
         Please enter your choice: """)
@@ -30,17 +30,17 @@ def menu():
     elif choice == "C" or choice =="c":
         viewindexp()
     elif choice == "D" or choice =="d":
-        viewf1()
-    elif choice == "E" or choice =="e":
-        viewepl()
-    elif choice == "F" or choice == "f":
-        viewyssocial()
-    elif choice == "G" or choice == "g":
         viewguardian()
-    elif choice == "H" or choice == "h":
+    elif choice == "E" or choice =="e":
         viewprojsyndicate()
-    elif choice == "I" or choice == "i":
+    elif choice == "F" or choice == "f":
         viewhbrlatest()
+    elif choice == "G" or choice == "g":
+        viewf1()
+    elif choice == "H" or choice == "h":
+        viewepl()
+    elif choice == "I" or choice == "i":
+        viewyssocial()
     elif choice=="Q" or choice=="q":
         print('\nGoodbye!\n\n')
         sys.exit
