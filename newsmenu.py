@@ -13,12 +13,13 @@ def menu():
         A: Editorials - Hindu
         B: Editorials - EconomicTimes
         C: Editorials - IndianExpress
-        D: Editorials - Guardian
-        E: Editorials -  Project Syndicate
-        F: Management -  Harvard Business Review
-        G: Sports - Formula1
-        H: Sports - PremierLeague
-        I: Startups - YourStory:Social 
+        D: Editorials - HinduBusinessLine
+        E: Editorials - Guardian
+        F: Editorials -  Project Syndicate
+        G: Management -  Harvard Business Review
+        H: Sports - Formula1
+        I: Sports - PremierLeague
+        J: Startups - YourStory:Social 
         Q: Quit/Log Out
 
         Please enter your choice: """)
@@ -30,22 +31,24 @@ def menu():
     elif choice == "C" or choice =="c":
         viewindexp()
     elif choice == "D" or choice =="d":
-        viewguardian()
+        viewhbline()
     elif choice == "E" or choice =="e":
-        viewprojsyndicate()
+        viewguardian()
     elif choice == "F" or choice == "f":
-        viewhbrlatest()
+        viewprojsyndicate()
     elif choice == "G" or choice == "g":
-        viewf1()
+        viewhbrlatest()
     elif choice == "H" or choice == "h":
-        viewepl()
+        viewf1()
     elif choice == "I" or choice == "i":
+        viewepl()
+    elif choice == "J" or choice == "j":
         viewyssocial()
     elif choice=="Q" or choice=="q":
         print('\nGoodbye!\n\n')
         sys.exit
     else:
-        print("You must only select either A-I or Q.")
+        print("You must only select either A-J or Q.")
         print("Please try again")
         menu()
 
@@ -61,6 +64,11 @@ def viewet():
 
 def viewindexp():
     cmd = 'node index eds ie'
+    os.system(cmd)
+    readfurther()
+
+def viewhbline():
+    cmd = 'node index eds hbl'
     os.system(cmd)
     readfurther()
 
