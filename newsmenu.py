@@ -17,6 +17,7 @@ def menu():
         E: Sports - PremierLeague
         F: YourStory - Social
         G: Editorials - Guardian
+        H: Project Syndicate
         Q: Quit/Log Out
 
         Please enter your choice: """)
@@ -35,10 +36,13 @@ def menu():
         viewyssocial()
     elif choice == "G" or choice == "g":
         viewguardian()
+    elif choice == "H" or choice == "h":
+        viewprojsyndicate()
     elif choice=="Q" or choice=="q":
+        print('\nGoodbye!\n\n')
         sys.exit
     else:
-        print("You must only select either A-G or Q.")
+        print("You must only select either A-H or Q.")
         print("Please try again")
         menu()
 
@@ -77,13 +81,19 @@ def viewguardian():
     os.system(cmd)
     readfurther()
 
+def viewprojsyndicate():
+    cmd ='node index projsyn all'
+    os.system(cmd)
+    readfurther()
+
+
 def readfurther():
     choice = input("""
         Do you want to read further? 
         Press any-key to continue.
         Press 'Q/q' to quit : """)
     if choice == "Q" or choice == "q":
-        print('Goodbye!')
+        print('\nGoodbye!\n\n')
         sys.exit()
     else:
         menu()
