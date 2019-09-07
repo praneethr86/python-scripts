@@ -54,10 +54,16 @@ def main():
         "The Economist", "node index magz economist")
     command_item_magz_atlantic = CommandItem(
         "The Atlantic", "node index magz atlantic")
+    command_item_magz_newyorker = CommandItem(
+        "The NewYorker", "node index magz newyorker")
+    command_item_magz_frontline = CommandItem(
+        "Frontline by Hindu", "node index magz frontline")
     submenu_magz.append_item(command_item_magz_hbr)
     submenu_magz.append_item(command_item_magz_projsyn)
     submenu_magz.append_item(command_item_magz_economist)
     submenu_magz.append_item(command_item_magz_atlantic)
+    submenu_magz.append_item(command_item_magz_newyorker)
+    submenu_magz.append_item(command_item_magz_frontline)
     menu_submenu_magz = SubmenuItem(
         "Magazines", submenu=submenu_magz)
     menu_submenu_magz.set_menu(menu)
