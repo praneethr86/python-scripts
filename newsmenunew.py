@@ -34,10 +34,14 @@ def main():
 
     # Commands for Sports
     submenu_sports = ConsoleMenu("Sports", "Read Sports Updates")
-    command_item_sports_f1 = CommandItem("ESPN F1", "node index sports f1")
+    command_item_sports_f1_espn = CommandItem(
+        "ESPN F1", "node index sports espnf1")
+    command_item_sports_f1_autosport = CommandItem(
+        "Autosport F1", "node index sports autof1")
     command_item_sports_epl = CommandItem(
         "English Premier League", "node index sports epl")
-    submenu_sports.append_item(command_item_sports_f1)
+    submenu_sports.append_item(command_item_sports_f1_espn)
+    submenu_sports.append_item(command_item_sports_f1_autosport)
     submenu_sports.append_item(command_item_sports_epl)
     menu_submenu_sports = SubmenuItem("Sports", submenu=submenu_sports)
     menu_submenu_sports.set_menu(menu)
