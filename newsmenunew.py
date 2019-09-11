@@ -8,10 +8,6 @@ def main():
 
     menu = ConsoleMenu("My News Reader", "Happy Reading !")
 
-    # item1 = MenuItem("Management", menu)
-    # item1 = MenuItem("Sports", menu)
-    # item1 = MenuItem("Startups", menu)
-
     # Commands for Editorials
     submenu_editorials = ConsoleMenu(
         "Editorials", "Read editorials from Top news sites")
@@ -46,6 +42,17 @@ def main():
     menu_submenu_sports = SubmenuItem("Sports", submenu=submenu_sports)
     menu_submenu_sports.set_menu(menu)
     menu.append_item(menu_submenu_sports)
+
+    # Commands for Tech News
+    submenu_tech = ConsoleMenu("Tech", "Read Tech News")
+    command_item_tech_techcrunch = CommandItem(
+        "TechCrunch", "node index tech techcrunch")
+    command_item_tech_tnw = CommandItem("TheNextWeb", "node index tech tnw")
+    submenu_tech.append_item(command_item_tech_techcrunch)
+    submenu_tech.append_item(command_item_tech_tnw)
+    menu_submenu_tech = SubmenuItem("Tech", submenu=submenu_tech)
+    menu_submenu_tech.set_menu(menu)
+    menu.append_item(menu_submenu_tech)
 
     # Commands for Magazines
     submenu_magz = ConsoleMenu(
