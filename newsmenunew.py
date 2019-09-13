@@ -18,11 +18,14 @@ def main():
         "Hindu Business Line", "node index eds hbl")
     command_item_eds_guardian = CommandItem(
         "Guardian", "node index eds guardian")
+    command_item_eds_livemint = CommandItem(
+        "LiveMint", "node index eds livemint")
     submenu_editorials.append_item(command_item_eds_hindu)
     submenu_editorials.append_item(command_item_eds_et)
     submenu_editorials.append_item(command_item_eds_ie)
     submenu_editorials.append_item(command_item_eds_hbl)
     submenu_editorials.append_item(command_item_eds_guardian)
+    submenu_editorials.append_item(command_item_eds_livemint)
     menu_submenu_editorials = SubmenuItem(
         "Editorials", submenu=submenu_editorials)
     menu_submenu_editorials.set_menu(menu)
