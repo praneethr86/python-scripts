@@ -12,6 +12,8 @@ def main():
     submenu_editorials = ConsoleMenu(
         "Editorials", "Read editorials from Top news sites")
     command_item_eds_hindu = CommandItem("The Hindu", "node index eds hindu")
+    command_item_eds_hindulead = CommandItem(
+        "The Hindu Lead Opinion", "node index eds hindulead")
     command_item_eds_et = CommandItem("Economic Times", "node index eds et")
     command_item_eds_ie = CommandItem("Indian Express", "node index eds ie")
     command_item_eds_hbl = CommandItem(
@@ -21,6 +23,7 @@ def main():
     command_item_eds_livemint = CommandItem(
         "LiveMint", "node index eds livemint")
     submenu_editorials.append_item(command_item_eds_hindu)
+    submenu_editorials.append_item(command_item_eds_hindulead)
     submenu_editorials.append_item(command_item_eds_et)
     submenu_editorials.append_item(command_item_eds_ie)
     submenu_editorials.append_item(command_item_eds_hbl)
