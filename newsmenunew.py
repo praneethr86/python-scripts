@@ -80,6 +80,8 @@ def main():
         "Frontline by Hindu", "node index magz frontline")
     command_item_magz_sciam = CommandItem(
         "Scientific American", "node index science sciam")
+    command_item_magz_popsci = CommandItem(
+        "Popular Science", "node index science popsci")
     submenu_magz.append_item(command_item_magz_hbr)
     submenu_magz.append_item(command_item_magz_projsyn)
     submenu_magz.append_item(command_item_magz_economist)
@@ -87,6 +89,7 @@ def main():
     submenu_magz.append_item(command_item_magz_newyorker)
     submenu_magz.append_item(command_item_magz_frontline)
     submenu_magz.append_item(command_item_magz_sciam)
+    submenu_magz.append_item(command_item_magz_popsci)
     menu_submenu_magz = SubmenuItem(
         "Magazines", submenu=submenu_magz)
     menu_submenu_magz.set_menu(menu)
