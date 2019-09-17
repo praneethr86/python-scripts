@@ -81,6 +81,8 @@ def main():
         "The NewYorker", "node index magz newyorker")
     command_item_magz_frontline = CommandItem(
         "Frontline by Hindu", "node index magz frontline")
+    command_item_magz_longreads = CommandItem(
+        "Long Reads", "node index magz longreads")
     command_item_magz_sciam = CommandItem(
         "Scientific American", "node index science sciam")
     command_item_magz_popsci = CommandItem(
@@ -93,6 +95,7 @@ def main():
     submenu_magz.append_item(command_item_magz_frontline)
     submenu_magz.append_item(command_item_magz_sciam)
     submenu_magz.append_item(command_item_magz_popsci)
+    submenu_magz.append_item(command_item_magz_longreads)
     menu_submenu_magz = SubmenuItem(
         "Magazines", submenu=submenu_magz)
     menu_submenu_magz.set_menu(menu)
