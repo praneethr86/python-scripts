@@ -57,8 +57,11 @@ def main():
     command_item_tech_techcrunch = CommandItem(
         "TechCrunch", "node index tech techcrunch")
     command_item_tech_tnw = CommandItem("TheNextWeb", "node index tech tnw")
+    command_item_tech_readwrite = CommandItem(
+        "ReadWrite", "node index tech readwrite")
     submenu_tech.append_item(command_item_tech_techcrunch)
     submenu_tech.append_item(command_item_tech_tnw)
+    submenu_tech.append_item(command_item_tech_readwrite)
     menu_submenu_tech = SubmenuItem("Tech", submenu=submenu_tech)
     menu_submenu_tech.set_menu(menu)
     menu.append_item(menu_submenu_tech)
