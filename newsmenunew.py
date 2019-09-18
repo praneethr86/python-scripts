@@ -53,16 +53,22 @@ def main():
     menu.append_item(menu_submenu_sports)
 
     # Commands for Tech News
-    submenu_tech = ConsoleMenu("Tech", "Read Tech News")
+    submenu_tech = ConsoleMenu("Science & Tech", "Read Tech News")
     command_item_tech_techcrunch = CommandItem(
         "TechCrunch", "node index tech techcrunch")
     command_item_tech_tnw = CommandItem("TheNextWeb", "node index tech tnw")
     command_item_tech_readwrite = CommandItem(
         "ReadWrite", "node index tech readwrite")
+    command_item_tech_sciam = CommandItem(
+        "Scientific American", "node index science sciam")
+    command_item_tech_popsci = CommandItem(
+        "Popular Science", "node index science popsci")
     submenu_tech.append_item(command_item_tech_techcrunch)
     submenu_tech.append_item(command_item_tech_tnw)
     submenu_tech.append_item(command_item_tech_readwrite)
-    menu_submenu_tech = SubmenuItem("Tech", submenu=submenu_tech)
+    submenu_tech.append_item(command_item_tech_sciam)
+    submenu_tech.append_item(command_item_tech_popsci)
+    menu_submenu_tech = SubmenuItem("Science & Tech", submenu=submenu_tech)
     menu_submenu_tech.set_menu(menu)
     menu.append_item(menu_submenu_tech)
 
@@ -83,19 +89,17 @@ def main():
         "Frontline by Hindu", "node index magz frontline")
     command_item_magz_longreads = CommandItem(
         "Long Reads", "node index magz longreads")
-    command_item_magz_sciam = CommandItem(
-        "Scientific American", "node index science sciam")
-    command_item_magz_popsci = CommandItem(
-        "Popular Science", "node index science popsci")
+    command_item_magz_hinduexplains = CommandItem(
+        "The Hindu Explains", "node index magz hinduexplains")
     submenu_magz.append_item(command_item_magz_hbr)
     submenu_magz.append_item(command_item_magz_projsyn)
     submenu_magz.append_item(command_item_magz_economist)
     submenu_magz.append_item(command_item_magz_atlantic)
     submenu_magz.append_item(command_item_magz_newyorker)
     submenu_magz.append_item(command_item_magz_frontline)
-    submenu_magz.append_item(command_item_magz_sciam)
-    submenu_magz.append_item(command_item_magz_popsci)
     submenu_magz.append_item(command_item_magz_longreads)
+    submenu_magz.append_item(command_item_magz_hinduexplains)
+
     menu_submenu_magz = SubmenuItem(
         "Magazines", submenu=submenu_magz)
     menu_submenu_magz.set_menu(menu)
