@@ -78,15 +78,15 @@ def main():
     command_item_tech_techcrunch = CommandItem(
         "TechCrunch", "node index tech techcrunch")
     command_item_tech_tnw = CommandItem("TheNextWeb", "node index tech tnw")
-    command_item_tech_readwrite = CommandItem(
-        "ReadWrite", "node index tech readwrite")
+    # command_item_tech_readwrite = CommandItem(
+    #     "ReadWrite", "node index tech readwrite")
     command_item_tech_sciam = CommandItem(
         "Scientific American", "node index science sciam")
     command_item_tech_popsci = CommandItem(
         "Popular Science", "node index science popsci")
     submenu_tech.append_item(command_item_tech_techcrunch)
     submenu_tech.append_item(command_item_tech_tnw)
-    submenu_tech.append_item(command_item_tech_readwrite)
+    # submenu_tech.append_item(command_item_tech_readwrite)
     submenu_tech.append_item(command_item_tech_sciam)
     submenu_tech.append_item(command_item_tech_popsci)
     menu_submenu_tech = SubmenuItem("Science & Tech", submenu=submenu_tech)
