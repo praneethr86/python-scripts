@@ -8,6 +8,37 @@ def main():
 
     menu = ConsoleMenu("My News Reader", "Happy Reading !")
 
+    # Commands for Favorites
+    submenu_favs = ConsoleMenu("Favorites", "My Favorites")
+    command_item_favs_1 = CommandItem("The Hindu", "node index eds hindu")
+    command_item_favs_2 = CommandItem(
+        "Harvard Business Review", "node index magz hbr")
+    command_item_favs_3 = CommandItem(
+        "Project Syndicate", "node index magz projsyn")
+    command_item_favs_4 = CommandItem(
+        "The Economist", "node index magz economist")
+    command_item_favs_5 = CommandItem(
+        "TechCrunch", "node index tech techcrunch")
+    command_item_favs_6 = CommandItem(
+        "ESPN F1", "node index sports espnf1")
+    command_item_favs_7 = CommandItem(
+        "Autosport F1", "node index sports autof1")
+    command_item_favs_8 = CommandItem(
+        "English Premier League", "node index sports epl")
+    submenu_favs.append_item(command_item_favs_1)
+    submenu_favs.append_item(command_item_favs_2)
+    submenu_favs.append_item(command_item_favs_3)
+    submenu_favs.append_item(command_item_favs_4)
+    submenu_favs.append_item(command_item_favs_5)
+    submenu_favs.append_item(command_item_favs_6)
+    submenu_favs.append_item(command_item_favs_7)
+    submenu_favs.append_item(command_item_favs_8)
+    menu_submenu_favs = SubmenuItem(
+        "Favorites", submenu=submenu_favs)
+    menu_submenu_favs.set_menu(menu)
+    menu.append_item(menu_submenu_favs)
+
+
     # Commands for Editorials
     submenu_editorials = ConsoleMenu(
         "Editorials/Columns", "Read editorials/columns from Top news sites")
