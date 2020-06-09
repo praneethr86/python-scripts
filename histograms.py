@@ -1,7 +1,6 @@
 from collections import Counter
 import random
 
-
 def count_elements(seq) -> dict:
     hist = {}
     for i in seq:
